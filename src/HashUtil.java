@@ -13,8 +13,8 @@ public class HashUtil {
 
             // convert byte array to hex string
             StringBuilder hexString = new StringBuilder();
-            for (byte b : hashBytes) {
-                String hex = Integer.toHexString(0xff & b);
+            for (byte bit : hashBytes) {
+                String hex = Integer.toHexString(0xff & bit);
                 if (hex.length() == 1) hexString.append('0');
                 hexString.append(hex);
             }
