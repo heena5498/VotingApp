@@ -1,6 +1,6 @@
 public class Vote {
 
-    private String votedId;
+    private String voterId;
     private final boolean isYay; // Yay or Nay
 
     public Vote(String voterId, boolean isYay){

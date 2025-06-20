@@ -19,7 +19,29 @@ public class Block {
     }
 
     public String calculateHash(){
+        String data = index + prevHash + timestamp.toString() + vote.toString();
+        return HashUtil.applySha256(data);
+    }
 
+    public String getHash(){
+        return hash;
+    }
+
+    public String getPreviousHash(){
+        return prevHash;
+    }
+
+    public Vote getVote(){
+        return vote;
+    }
+
+    @Override
+    public String toString(){
+        return "Block #" + index + "\n" +
+                "Timestamp: " + timestamp + "\n" +
+                "Vote: " + vote + "\n" +
+                "Previous Hash: " + prevHash + "\n" +
+                "Hash: " + hash + "\n";
     }
 
 }
