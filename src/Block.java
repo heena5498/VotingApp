@@ -1,7 +1,6 @@
 import java.time.LocalDateTime;
 
 public class Block {
-
     private int index;
     private String prevHash;
     private String hash;
