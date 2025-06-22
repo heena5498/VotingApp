@@ -12,7 +12,7 @@ public class Blockchain {
     }
 
     private Block createGenBlock() {
-        return new Block(0, "0", new Vote("genesis (start)", true));
+        return new Block(0, "0", new Vote("genesis (start)", "N/A"));
     }
 
     public Block getLatestBlock(){

@@ -6,43 +6,38 @@ public class VotingApp {
         Scanner scanner = new Scanner(System.in);
         Blockchain blockchain = new Blockchain();
 
-        System.out.println("Welcome to the Jenna's Voting Blockchain CLI System!");
+        System.out.println("Welcome to Jenna's Voting Blockchain CLI System!");
+        System.out.println("************************************************");
 
         while (true) {
-            System.out.println("\nMenu:");
+            System.out.println("Main Menu:");
             System.out.println("1. Cast vote");
             System.out.println("2. View blockchain");
             System.out.println("3. Check chain validity");
             System.out.println("4. Exit");
+            System.out.println("************************************************");
             System.out.print("Choose option: ");
             String option = scanner.nextLine();
 
             switch (option) {
                 case "1":
-                    boolean newVote = false;
                     System.out.print("Enter voter ID: ");
                     String voterId = scanner.nextLine();
-                    System.out.print("Enter vote('yay' or 'nay'): ");
-                    String userVote = scanner.nextLine();
+                    System.out.print("Please enter the candidate you would like to vote for: ");
+                    String userChoice = scanner.nextLine();
 
-                    if (userVote.equals("yay")) {
-                        newVote = true;
-                    }
-                    else if (userVote.equals("nay")) {
-                        newVote = false;
-                    }
-
-                    Vote vote = new Vote(voterId, newVote);
+                    Vote vote = new Vote(voterId, userChoice);
                     blockchain.addBlock(vote);
                     System.out.println("Vote has been added to the blockchain!");
-
                     break;
+
                 case "2":
                     blockchain.printChain();
                     break;
                 case "3":
                     boolean isValid = blockchain.isChainValid();
-                    System.out.println("The blokchain is " + (isValid ? "Valid blockchain!" : "INVALID blockchain!"));
+                    System.out.println("The blockchain is " + (isValid ? "Valid!" : "INVALID!"));
+                    break;
                 case "4":
                     System.out.println("Exiting voting system, Goodbye!");
                     return;

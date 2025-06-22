@@ -1,24 +1,24 @@
 public class Vote {
 
     private final String voterId;
-    private final boolean isYay; // Yay or Nay
+    private final String choice; // Yay or Nay
 
-    public Vote(String voterId, boolean isYay){
+    public Vote(String voterId, String choice){
         this.voterId = voterId;
-        this.isYay = isYay;
+        this.choice = choice;
     }
 
     public String getVoterId(){
         return voterId;
     }
 
-    public boolean isYay(){
-        return isYay;
+    public String choice(){
+        return choice;
     }
 
     @Override
     public String toString(){
-        return "Voter: " + voterId + ", Vote: " + (isYay ? "Yay" : "Nay");
+        return "Voter: " + voterId + ", Vote: " + choice;
     }
 
 }
