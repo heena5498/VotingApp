@@ -1,7 +1,6 @@
 # 📦 Blockchain Voting Application
 
-> One-liner about your project.  
-> (e.g., A modern message board for WGU students to connect and collaborate.)
+> A local machine application for voting that enhances security and maintains validity.
 
 ---
 
