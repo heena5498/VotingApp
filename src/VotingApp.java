@@ -23,7 +23,7 @@ public class VotingApp {
                 case "1":
                     System.out.print("Enter voter ID: ");
                     String voterId = scanner.nextLine();
-                    System.out.print("Please enter the candidate you would like to vote for: ");
+                    System.out.print("Please enter the name of the candidate you want to vote for: ");
                     String userChoice = scanner.nextLine();
 
                     Vote vote = new Vote(voterId, userChoice);
