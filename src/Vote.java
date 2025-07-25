@@ -1,10 +1,15 @@
 public class Vote {
 
     private final String voterId;
-    private final String candidate; // take user input
+    //private final String voteTopic;
+    //private final String voterFirstName;
+    //private final String voterLastName;
+    private final String candidate;
 
     public Vote(String voterId, String candidate){
         this.voterId = voterId;
+        //this.voterFirstName = voterFirstName;
+        //this.voterLastName = voterLastName;
         this.candidate = candidate;
     }
 

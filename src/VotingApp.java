@@ -21,8 +21,13 @@ public class VotingApp {
 
             switch (option) {
                 case "1":
-                    System.out.print("Enter voter ID: ");
-                    String voterId = scanner.nextLine();
+                    System.out.print("Please enter your first name: ");
+                    String voterFirstName = scanner.nextLine();
+                    System.out.print("Please enter your last name: ");
+                    String voterLastName = scanner.nextLine();
+
+                    String voterId = VoterId.getVoterId(voterFirstName, voterLastName);
+
                     System.out.print("Please enter the name of the candidate you want to vote for: ");
                     String userChoice = scanner.nextLine();
 
