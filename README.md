@@ -1,6 +1,6 @@
 # 📦 Blockchain Voting Application
 
-> A local machine application for voting that enhances security and maintains validity.
+> A local machine application for voting that enhances security and maintains validity via blockchain technology design. 
 
 ---
 
