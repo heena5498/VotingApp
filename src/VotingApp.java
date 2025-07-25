@@ -23,15 +23,22 @@ public class VotingApp {
                 case "1":
                     System.out.print("Please enter your first name: ");
                     String voterFirstName = scanner.nextLine();
+
                     System.out.print("Please enter your last name: ");
                     String voterLastName = scanner.nextLine();
 
+                    VoteTopic.getTopics();
+                    System.out.println("---------------------------");
+                    System.out.print("Choose a topic to vote on: (1-5)");
+                    int votersTopic = scanner.nextInt();
+                    scanner.nextLine();
+
                     String voterId = VoterId.getVoterId(voterFirstName, voterLastName);
 
-                    System.out.print("Please enter the name of the candidate you want to vote for: ");
+                    System.out.print("Please enter your vote: ");
                     String userChoice = scanner.nextLine();
 
-                    Vote vote = new Vote(voterId, userChoice);
+                    Vote vote = new Vote(voterId, votersTopic, userChoice);
                     blockchain.addBlock(vote);
                     System.out.println("Vote has been added to the blockchain!");
                     break;

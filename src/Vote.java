@@ -1,16 +1,18 @@
 public class Vote {
 
     private final String voterId;
-    //private final String voteTopic;
+    private final int voteTopic;
     //private final String voterFirstName;
     //private final String voterLastName;
     private final String candidate;
 
-    public Vote(String voterId, String candidate){
+    public Vote(String voterId, int voteTopic, String candidate){
         this.voterId = voterId;
+        this.voteTopic = voteTopic;
         //this.voterFirstName = voterFirstName;
         //this.voterLastName = voterLastName;
         this.candidate = candidate;
+
     }
 
     public String getVoterId(){
@@ -24,7 +26,7 @@ public class Vote {
 
     @Override
     public String toString(){
-        return "Voter: " + voterId + ", Vote: " + candidate;
+        return "Voter: " + voterId + ", Vote Topic: " + voteTopic + ", Vote: " + candidate;
     }
 
 }
