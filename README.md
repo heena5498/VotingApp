@@ -1,6 +1,6 @@
 # 📦 Blockchain Voting Application
 
-> A local machine application for voting that enhances security and maintains validity.
+> A local machine application for voting that enhances security and maintains validity via blockchain technology design. 
 
 ---
 
@@ -9,7 +9,9 @@
 - ✅ Easy-to-use CLI menu
 - 📝 Check blockchain validity option
 - 🔍 View current blockchain option
-- 🔐 No authentication currently but will be updated in the future feel free to send a pr :)
+- 📬 Creates Voter ID based off first and last name
+- 📍 Allows voter to choose vote topic and manually type vote 
+- 🎈 Vote Application creates a block in the blockchain 
 
 ---
 
